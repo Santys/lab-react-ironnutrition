@@ -7,7 +7,7 @@ const FoodBox = (props) => {
     const {name, calories, image, servings} = props.food
 
     return (
-        <Col className="col">
+        <Col>
             <Card
                 title={name}
                 style={{ width: 230, height: 300, margin: 10 }}
