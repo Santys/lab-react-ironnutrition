@@ -6,7 +6,7 @@ import './AddFoodForm.css';
 
 const AddFoodForm = (props) => {
 
-    const {foodsList, setFood} = props
+    const {foodsList, setFood, setNotFilteredFoodsList} = props
 
     const [inputName, setInputName] = useState('')
     const [inputImage, setInputImage] = useState('')
@@ -22,6 +22,7 @@ const AddFoodForm = (props) => {
             servings: inputServings,
         });
         setFood(foodListCopy)
+        setNotFilteredFoodsList(foodListCopy)
     }
 
     return (

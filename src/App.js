@@ -11,10 +11,11 @@ import Search from "./components/Search/Search";
 function App() {
 
   const [foodsList, setFood] = useState(foods)
+  const [notFilteredFoodsList, setNotFilteredFoodsList] = useState(foods)
 
   const search = (text) =>{
-    console.log("hola")
-    const searched = foodsList.filter(food => {
+    // New search in all pool after typing
+    const searched = notFilteredFoodsList.filter(food => {
       return food.name.toLowerCase().includes(text.toLowerCase())
     })
     setFood(searched)
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <h1>Food list</h1>
-      <AddFoodForm foodsList={foodsList} setFood={setFood}/>
+      <AddFoodForm foodsList={foodsList} setFood={setFood} setNotFilteredFoodsList={setNotFilteredFoodsList} />
       <Search search={search}/>
       <Row> 
         {foodsList.map(food => {
