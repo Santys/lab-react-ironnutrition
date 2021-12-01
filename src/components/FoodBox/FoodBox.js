@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './FoodBox.css';
 
 const FoodBox = (props) => {
+    
 
     const {name, calories, image, servings} = props.food
 
@@ -18,7 +19,7 @@ const FoodBox = (props) => {
                 <p>
                     <b>Total Calories: {calories} * {servings} </b> kcal
                 </p>
-                <Button type="primary"> Delete </Button>
+                <Button type="primary" onClick={() => props.deleteFood({name})}> Delete </Button>
             </Card>
       </Col>
     );
