@@ -3,6 +3,7 @@ import foods from "./foods.json";
 import './App.css';
 import { useState } from "react";
 import FoodBox from "./components/FoodBox/FoodBox";
+import AddFoodForm from "./components/AddFoodForm/AddFoodForm";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>Food list</h1>
+      <AddFoodForm foodsList={foodsList} setFood={setFood}/>
       <Row> 
         {foodsList.map(food => {
           return(

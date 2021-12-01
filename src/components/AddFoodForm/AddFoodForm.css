@@ -1,0 +1,9 @@
+.AddFoodForm{
+    width: 300px;
+    text-align: start;
+    margin: 20px;
+}
+
+.AddFoodForm p{
+    margin-bottom: 0px;
+}
